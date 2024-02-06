@@ -4,7 +4,12 @@
 # Create some adjustments or new in the program
 # Done
 # Imports
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
 import sympy as sy
+
+
+def f(x): return 5*x**3 - 3*x
+
+
+x = sy.Symbol('x')
+der = sy.diff(f(x), x)
+print(der)
