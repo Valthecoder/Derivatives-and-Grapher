@@ -6,21 +6,15 @@
 # Imports
 import sympy as sy
 
-
-def f(x): return 5*x**3 - 3*x
-
-
 x = sy.Symbol('x')
 
 
-def get_super(exp):
-    normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-=()"
-    super_s = "ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾"
-    res = exp.maketrans(''.join(normal), ''.join(super_s))
-    return x.translate(res)
+y = 5*x**3 - 3*x
 
 
-der = sy.diff(f(x), x)
-print(get_super(der))
-
+der = sy.diff(y, x)
+der_format = sy.printing.latex(der)
+der_format1 = der_format.replace('*', '')
+print(der_format1)
+print(type)
 
