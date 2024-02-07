@@ -13,7 +13,7 @@ x, a, b, c = smp.symbols('x a b c', real=True)
 func_y = (smp.exp(-a*smp.sin(x**2)) * smp.sin(b**x) * smp.log(c*smp.sin(x))**2 / x)
 
 dydx = smp.diff(func_y, x)
-print(dydx)
+print("dy/dx or y'=", dydx)
 dydx.subs([(x, 4), (a, 1), (b, 2), (c, 3)]).evalf()
 dydx_f = smp.lambdify((x, a, b, c), dydx)
 x = np.linspace(1, 2, 100)
