@@ -4,14 +4,14 @@
 # Create some adjustments or new in the program
 # Done
 # Imports
-from sympy import *
 import sympy as sy
-import math
-y = input("Type your function here: ")
+import numpy as np
+from scipy.misc import derivative
+import sympy as smp
+x = smp.Symbol('x')
+y = smp.sin(x) * smp.exp(-smp.cos(x)) * x**5 \
+            / (smp.sin(10*x**2)+4)
 
-x = sy.Symbol('x')
 
-der = sy.diff(y, x)
-der_format = sy.printing.latex(der)
-der_format1 = der_format.replace('*', '')
-print(der_format1)
+der = smp.diff(y, x)
+print(der)
