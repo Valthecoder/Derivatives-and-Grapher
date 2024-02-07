@@ -4,17 +4,14 @@
 # Create some adjustments or new in the program
 # Done
 # Imports
+from sympy import *
 import sympy as sy
+import math
+y = input("Type your function here: ")
 
 x = sy.Symbol('x')
-
-
-y = 5*x**3 - 3*x
-
 
 der = sy.diff(y, x)
 der_format = sy.printing.latex(der)
 der_format1 = der_format.replace('*', '')
 print(der_format1)
-print(type)
-
