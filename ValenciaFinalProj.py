@@ -4,14 +4,13 @@
 # Create some adjustments or new in the program
 # Done
 # Imports
-import sympy as sy
+import sympy as smp
+import scipy as sp
+import matplotlib.pyplot as plt
 import numpy as np
 from scipy.misc import derivative
-import sympy as smp
-x = smp.Symbol('x')
-y = smp.sin(x) * smp.exp(-smp.cos(x)) * x**5 \
-            / (smp.sin(10*x**2)+4)
+x, a, b, c = smp.symbols('x a b c', real=True)
+func_y = (smp.exp(-a*smp.sin(x**2)) * smp.sin(b**x) * smp.log(c*smp.sin(x))**2 / x)
 
-
-der = smp.diff(y, x)
-print(der)
+dydx = smp.diff(func_y, x)
+print(dydx)
