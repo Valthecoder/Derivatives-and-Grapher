@@ -11,6 +11,7 @@ import numpy as np
 from scipy.misc import derivative
 x, a, b, c = smp.symbols('x a b c', real=True)
 func_y = (smp.exp(-a*smp.sin(x**2)) * smp.sin(b**x) * smp.log(c*smp.sin(x))**2 / x)
+print(func_y)
 
 dydx = smp.diff(func_y, x)
 print("dy/dx or y'=", dydx)
