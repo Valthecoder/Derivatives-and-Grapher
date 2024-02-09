@@ -14,7 +14,10 @@ import numpy as np
 from fractions import Fraction
 
 x = Symbol('x')
-y = input('Enter a Function (x² = x**2 and 2x = 2*x) : \n y = ')
+y = input('Enter a Function : \n Reminders for input: \n (2x: Input 2*x | x²: Input x**2 | '
+          'Trigo: Input cos or sin or tan(expression) | arccos: Input acos(expression)'
+          'e^4x: Input exp(4*x) | '
+          '\n Always follow the parentheses rule for fractions, Thank you! \n y = ')
 func_y = sympify(y)
 yprime = func_y.diff(x)
 print("y' = ", yprime)
