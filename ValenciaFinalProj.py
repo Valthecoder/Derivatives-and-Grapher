@@ -4,15 +4,10 @@
 # Create some adjustments or new in the program
 # Done
 # Imports
-import sympy.core.add
 from sympy import *
-from scipy.misc import derivative
 import sympy as sym
-import math
 import matplotlib.pyplot as plt
 import numpy as np
-from fractions import Fraction
-
 x = Symbol('x')
 y = input('Enter a Function : \n Reminders for input: \n (2x: Input 2*x | x²: Input x**2 | '
           'Trigo: Input cos or sin or tan(expression) | arccos: Input acos(expression)'
